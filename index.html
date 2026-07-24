@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>○○工業株式会社</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f8f9fb;
+    }
+
+    header {
+      background: white;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      color: #0077b6;
+      font-size: 28px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 500px;
+      background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 36px;
+      color: #0077b6;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h4 {
+      margin-bottom: 15px;
+      color: #0077b6;
+    }
+
+    .about {
+      background: #eaf6fb;
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0077b6;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #023047;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    @media(max-width:768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>〇〇水道工業</h1>
+
+  <nav>
+    <a href="#service">事業内容</a>
+    <a href="#about">会社案内</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>地域の水まわりを支える。</h2>
+    <p>
+      水漏れ・配管工事・リフォームまで迅速対応
+    </p>
+  </div>
+</section>
+
+<section id="service">
+  <div class="section-title">
+    <h3>事業内容</h3>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <h4>水漏れ修理</h4>
+      <p>
+        キッチン・トイレ・浴室などの
+        水漏れトラブルに対応します。
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>配管工事</h4>
+      <p>
+        新築・改修問わず、
+        各種配管工事を行います。
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>リフォーム</h4>
+      <p>
+        水まわり設備の交換や
+        快適な空間づくりをご提案します。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="section-title">
+      <h3>会社案内</h3>
+    </div>
+
+    <p>
+      〇〇水道工業は、
+      地域密着型の水道工事会社として、
+      丁寧・迅速・安心を大切に
+      サービスを提供しています。
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h3>お問い合わせ</h3>
+  </div>
+
+  <p>
+    水まわりのお困りごとはお気軽にご相談ください。
+  </p>
+
+  <a href="tel:0000000000">
+    TEL: 000-0000-0000
+  </a>
+</section>
+
+<footer>
+  © 2026 〇〇水道工業
+</footer>
+
+</body>
