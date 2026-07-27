@@ -68,6 +68,7 @@ nav a{
   font-weight:bold;
 }
 
+
 .hero{
   height:600px;
   background:
@@ -84,7 +85,7 @@ nav a{
 }
 
 .hero h1{
-  font-size:54px;
+  font-size:45px;
   margin-bottom:20px;
 }
 
@@ -193,24 +194,6 @@ section{
   margin-bottom:15px;
 }
 
-.reason{
-  background:#eaf6fb;
-  border-radius:20px;
-  padding:60px;
-}
-
-.reason-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.reason-item{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-}
-
 .works{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -265,6 +248,31 @@ section{
   text-align:left;
 }
 
+@media (max-width:768px){
+
+.company{
+    padding:20px;
+}
+
+.company th,
+.company td{
+    display:block;
+    width:100%;
+    padding:10px 0;
+}
+
+.company th{
+    border-bottom:none;
+    font-weight:bold;
+    color:#0077b6;
+}
+
+.company td{
+    padding-bottom:18px;
+}
+
+}
+
 .contact{
   text-align:center;
   margin-top: 0px;
@@ -304,7 +312,7 @@ footer{
 
 @media(max-width:768px){
 
-   header{
+  header{
     padding:15px 5%;
   }
 
@@ -322,7 +330,7 @@ footer{
   }
 
   nav{
-    display:none;
+    display:flex;
   }
 
   /* 採用情報以外を非表示 */
@@ -343,7 +351,8 @@ footer{
 
   .recruit{
     font-size:12px;
-
+  }
+  
   section{
     padding:70px 6%;
   }
@@ -351,29 +360,6 @@ footer{
   .reason{
     padding:30px;
   }
-
-  .company{
-    padding:20px;
-  }
-
-  .company th,
-  .company td{
-    display:block;
-    width:100%;
-    padding:10px 0;
-  }
-
-  .company th{
-    border-bottom:none;
-    font-weight:bold;
-    color:#0077b6;
-   }
-
-  .company td{
-    padding-bottom:18px;
-   }
-  }
-
 
 }
 
@@ -439,7 +425,7 @@ html{
 </h1>
 
 <p class="fade-in">
-給排水設備・排水管布設・水漏れ修理まで　迅速丁寧に対応いたします
+給排水設備・排水管布設・水漏れ修理まで 迅速丁寧に対応いたします
 </p>
 
 <a href="#contact" class="btn">
@@ -542,7 +528,7 @@ html{
 <p>
 管工事業、水道施設工事業、土木工事業<br>
 とび・土工工事業、消防設備工事業
-</td>
+</p>
 </tr>
 </table>
 
