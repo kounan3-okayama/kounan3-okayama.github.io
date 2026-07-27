@@ -193,24 +193,6 @@ section{
   margin-bottom:15px;
 }
 
-.reason{
-  background:#eaf6fb;
-  border-radius:20px;
-  padding:60px;
-}
-
-.reason-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.reason-item{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-}
-
 .works{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -334,7 +316,19 @@ footer{
   }
 
   nav{
+    display:flex;
+  }
+
+  /* 採用情報以外を非表示 */
+  nav a:not(.recruit-link){
     display:none;
+  }
+
+  /* 採用情報だけ表示 */
+  .recruit-link{
+    display:block;
+    margin-left:0;
+    text-align:right;
   }
 
   section{
@@ -512,7 +506,7 @@ html{
 <p>
 管工事業、水道施設工事業、土木工事業<br>
 とび・土工工事業、消防設備工事業
-</td>
+</p>
 </tr>
 </table>
 
