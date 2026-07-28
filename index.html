@@ -40,7 +40,11 @@ header{
   position:sticky;
   top:0;
   z-index:100;
-  transition:all .3s ease;
+  transition:
+    padding .45s cubic-bezier(.22, 1, .36, 1),
+    background .45s ease,
+    box-shadow .45s ease,
+    backdrop-filter .45s ease;
 }
 
 /* スクロール後 */
@@ -75,6 +79,18 @@ header.shrink .recruit-title{
 
 header.shrink .recruit{
   font-size:13px;
+}
+
+.logo,
+.logo img,
+nav a,
+.recruit-title,
+.recruit{
+  transition:
+    font-size .45s cubic-bezier(.22, 1, .36, 1),
+    width .45s cubic-bezier(.22, 1, .36, 1),
+    margin .45s cubic-bezier(.22, 1, .36, 1),
+    color .3s ease;
 }
 
 .logo img {
@@ -793,11 +809,7 @@ fades.forEach(fade=>{
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
-  }
+  header.classList.toggle("shrink", window.scrollY > 30);
 });
 
 </script>
