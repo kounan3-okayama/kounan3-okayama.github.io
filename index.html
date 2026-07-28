@@ -40,8 +40,41 @@ header{
   position:sticky;
   top:0;
   z-index:100;
+  transition:all .3s ease;
+}
 
-  transition:0.3s;
+/* スクロール後 */
+header.shrink{
+  padding:8px 8%;
+}
+
+/* ロゴ画像を小さく */
+header.shrink .logo img{
+  width:50px;
+}
+
+/* ロゴ文字 */
+header.shrink .logo{
+  font-size:24px;
+}
+
+/* メニュー */
+header.shrink nav a{
+  font-size:17px;
+}
+
+header.shrink{
+  padding:8px 8%;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);
+}
+
+header.shrink .recruit-title{
+  font-size:17px;
+}
+
+header.shrink .recruit{
+  font-size:13px;
 }
 
 .logo img {
@@ -403,7 +436,7 @@ html{
 
 <header>
 <a href="#" class="logo">
-  <img src="images/a.jpeg" alt="会社ロゴ" width="50">
+  <img src="images/logo.png" alt="会社ロゴ" width="50">
   ○○△△株式会社
 </a>
 
@@ -712,8 +745,10 @@ TEL：000-000-0000
 </div>
 
 <p class="copyright">
-© ○○△△株式会社 All Rights Reserved.
+Copyright © ○○△△株式会社 All Rights Reserved.
 </p>
+
+</footer>
 
 <script>
 
@@ -733,6 +768,16 @@ const observer = new IntersectionObserver((entries) => {
 
 fades.forEach(fade=>{
   observer.observe(fade);
+});
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
 });
 
 </script>
